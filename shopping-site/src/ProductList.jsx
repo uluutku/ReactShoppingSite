@@ -41,6 +41,10 @@ const ProductList = ({ products }) => {
         return a.price - b.price;
       case 'highToLow':
         return b.price - a.price;
+      case 'alphabeticalAsc':
+        return a.title.localeCompare(b.title);
+      case 'alphabeticalDesc':
+        return b.title.localeCompare(a.title);
       default:
         return 0;
     }
@@ -59,14 +63,12 @@ const ProductList = ({ products }) => {
           Sort By:
         </label>
         <select id="sortSelect" value={sortOption} onChange={handleSortChange} className="sort-select">
-          <option value="">Select</option>
-          <option value="lowToHigh">Price Low to High</option>
-          <option value="highToLow">Price High to Low</option>
-        </select>
-      </div>
-
-      <div className="slideshow-container">
-        {/* Add your slideshow component here */}
+  <option value="">Select</option>
+  <option value="lowToHigh">Price Low to High</option>
+  <option value="highToLow">Price High to Low</option>
+  <option value="alphabeticalAsc">Alphabetical A-Z</option>
+  <option value="alphabeticalDesc">Alphabetical Z-A</option>
+</select>
       </div>
 
       <FilterSidebar

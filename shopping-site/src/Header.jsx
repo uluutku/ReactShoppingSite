@@ -14,13 +14,13 @@ function Header() {
 
   return (
     <header>
-      <h1>Your Website Name</h1>
+      <h1>SiteLogosu</h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/">Ana Sayfa</a>
+        <a href="/about">Alışveriş</a>
+        <a href="/contact">İletişim</a>
         <div className="basket-icon" onClick={toggleBasket}>
-        Basket 🛒 {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
+        Sepet 🛒 {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
       </div>
       </nav>
 

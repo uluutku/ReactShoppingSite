@@ -1,7 +1,7 @@
 /* BasketPopup.css */
 
 body {
-    background-color: #282c35; /* Dark mode background color */
+    background-color: #282c35;
   }
   
   .basket-popup {
@@ -10,7 +10,7 @@ body {
     right: 0;
     width: 400px;
     height: 100%;
-    background-color: #1e1e1e; /* Dark mode background color */
+    background-color: #1e1e1e;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     transition: transform 0.3s ease;
@@ -43,7 +43,7 @@ body {
   }
   
   .popup-header button:hover {
-    color: #3498db; /* Hover color for close button */
+    color: #3498db; 
   }
   
   ul {
@@ -69,7 +69,7 @@ body {
   
   .basket-item:hover {
     background-color: #333;
-    transform: scale(1.02); /* Scale up on hover */
+    transform: scale(1.02); 
   }
   
   .basket-item-image {
@@ -80,10 +80,7 @@ body {
     border-radius: 8px;
   }
   
-  .basket-item-info {
-    flex: 1;
-  }
-  
+
   .basket-item-name {
     font-size: 20px;
     color: #ecf0f1;
@@ -121,7 +118,8 @@ body {
   }
   
   .close-button:hover {
-    color: #e74c3c; /* Hover color for close button */
+    background-color: #e74c3c;
+    color: black; /* Hover color for close button */
   }
 
   .total-section {

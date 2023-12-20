@@ -35,3 +35,13 @@ header {
   nav a:hover {
     color: #3498db;
   }
+
+
+  .basket-icon {
+    font-size: large;
+    font-weight: bold;
+    margin-right: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
