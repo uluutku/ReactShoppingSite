@@ -28,7 +28,8 @@ This project is an online shopping site developed using React, Vite, and other m
 
 - React
 - Vite
-- (Add other relevant technologies used in your project)
+- JS
+- CSS
 
 ## Getting Started
 
@@ -36,15 +37,14 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
    git clone https://github.com/uluutku/ReactShoppingSite
 
 Install dependencies:
 
-cd your-repository
+cd shopping-site
 npm install
 Run the development server:
 
 npm run dev
-Open your browser and navigate to http://localhost:3000 to view the application.
+Open your browser and navigate to http://localhost:xxx to view the application.
 
