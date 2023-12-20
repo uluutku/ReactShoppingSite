@@ -1,53 +1,88 @@
+/* FilterSidebar.css */
+
 .filter-sidebar {
-  font-size: 12px;
-    background-color: var(--background-darker);
-    color: var(--text-light);
-    padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-  }
-  
-.filter-sidebar .price-section {
-    padding: 12px;
-    border: 1px solid #333333cb;
-    border-radius: 16px;
-    margin-top: 100px;
-  }
+  font-size: 14px;
+  background-color: var(--background-darker);
+  color: var(--text-light);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for depth */
+  height: 100%;
+  position: fixed;
+  top: 60px; /* Adjusted top to leave space for the header */
+  left: 0;
+  overflow-y: auto;
+  width: 250px;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out; /* Added a smooth transition */
+}
 
-  button,
-  .apply-button {
-    background-color: var(--primary-blue);
-    color: var(--text-light);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 4px;
-    margin-top: 10px;
-  }
-  
-  button:hover,
-  .apply-button:hover {
-    background-color: hsl(207, 100%, 40%);
-  }
-  
-  .price-inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    align-items: center;
+.filter-sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
 
-  }
-  
-  .price-inputs input {
-    border: 1px solid var(--primary-blue); 
-    border-radius: 18px; 
-    padding: 6px 0px; 
-    box-sizing: border-box;
-  }
+.filter-sidebar .price-section,
+.filter-sidebar .rating-section,
+.filter-sidebar .discount-section {
+  padding: 16px;
+  background-color: var(--background-dark);
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for card effect */
+  transition: transform 0.3s ease-in-out; /* Added a smooth transition */
+}
+
+button,
+.apply-button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added a smooth transition */
+}
+
+button:hover,
+.apply-button:hover {
+  background-color: hsl(207, 100%, 45%);
+}
+
+.price-inputs,
+.rating-inputs,
+.discount-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.price-inputs label,
+.rating-inputs label,
+.discount-inputs label {
+  margin-bottom: 6px;
+}
+
+.price-inputs input,
+.rating-inputs input,
+.discount-inputs input {
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+/* Fluent elegant animations */
+.price-section:hover,
+.rating-section:hover,
+.discount-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional styling for other filter sections can be added as needed */

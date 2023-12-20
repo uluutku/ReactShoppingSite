@@ -1,8 +1,9 @@
 // ProductList.jsx
+
 import React, { useState } from 'react';
 import FilterSidebar from './FilterSidebar.jsx';
 import { useBasket } from './BasketContext';
-import './ProductList.css'; // Import the ProductList.css file
+import './ProductList.css';
 
 const ProductList = ({ products }) => {
   const { addToBasket } = useBasket();
@@ -10,6 +11,8 @@ const ProductList = ({ products }) => {
   const [filters, setFilters] = useState({
     category: null,
     priceRange: { min: '', max: '' },
+    rating: '',
+    discountPercentage: '',
   });
 
   const [sortOption, setSortOption] = useState('');
@@ -22,17 +25,27 @@ const ProductList = ({ products }) => {
     setFilters({ ...filters, priceRange });
   };
 
+  const handleSelectRating = (rating) => {
+    setFilters({ ...filters, rating });
+  };
+
+  const handleSelectDiscount = (discountPercentage) => {
+    setFilters({ ...filters, discountPercentage });
+  };
+
   const handleSortChange = (event) => {
     setSortOption(event.target.value);
   };
 
   const applyFilters = (product) => {
-    const { category, priceRange } = filters;
+    const { category, priceRange, rating, discountPercentage } = filters;
     const categoryFilter = !category || product.category === category;
     const priceFilter =
       !priceRange.min || !priceRange.max || (product.price >= priceRange.min && product.price <= priceRange.max);
+    const ratingFilter = !rating || product.rating >= rating;
+    const discountFilter = !discountPercentage || product.discountPercentage >= discountPercentage;
 
-    return categoryFilter && priceFilter;
+    return categoryFilter && priceFilter && ratingFilter && discountFilter;
   };
 
   const applySorting = (a, b) => {
@@ -63,12 +76,12 @@ const ProductList = ({ products }) => {
           Sort By:
         </label>
         <select id="sortSelect" value={sortOption} onChange={handleSortChange} className="sort-select">
-  <option value="">Select</option>
-  <option value="lowToHigh">Price Low to High</option>
-  <option value="highToLow">Price High to Low</option>
-  <option value="alphabeticalAsc">Alphabetical A-Z</option>
-  <option value="alphabeticalDesc">Alphabetical Z-A</option>
-</select>
+          <option value="">Select</option>
+          <option value="lowToHigh">Price Low to High</option>
+          <option value="highToLow">Price High to Low</option>
+          <option value="alphabeticalAsc">Alphabetical A-Z</option>
+          <option value="alphabeticalDesc">Alphabetical Z-A</option>
+        </select>
       </div>
 
       <FilterSidebar
@@ -77,22 +90,31 @@ const ProductList = ({ products }) => {
         selectedPriceRange={filters.priceRange}
         onSelectCategory={handleSelectCategory}
         onSelectPriceRange={handleSelectPriceRange}
+        onSelectRating={handleSelectRating}
+        onSelectDiscount={handleSelectDiscount}
       />
 
       <div className="product-list">
-        {filteredProducts.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.thumbnail} alt={product.name} className="product-image" />
-            <div className="product-info">
-              <h3 className="product-title">{product.title}</h3>
-              <p className="product-description">{product.description}</p>
-              <p className="product-price">${product.price}</p>
-              <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>
-                Add to Cart
-              </button>
-            </div>
+        {filteredProducts.length === 0 ? (
+          <div className="no-items-message">
+            <p>No items match the selected filters. Please adjust your filters and try again.</p>
           </div>
-        ))}
+        ) : (
+          filteredProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.thumbnail} alt={product.title} className="product-image" />
+              <div className="product-info">
+                <div className="discount-badge">{product.discountPercentage}% OFF</div>
+                <h3 className="product-title">{product.title}</h3>
+                <p className="product-description">{product.description}</p>
+                <p className="product-price">${product.price}</p>
+                <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

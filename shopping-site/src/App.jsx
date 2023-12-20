@@ -1,25 +1,23 @@
-
 // App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header.jsx';
+import BuyProductPage from './BuyProductPage.jsx';
 import HomePage from './HomePage.jsx';
-import { BasketProvider } from './BasketContext'; // Import the BasketProvider
-
-const images = [
-  'https://picsum.photos/seed/picsum/1024/768',
-  'https://picsum.photos/seed/picsum/1024/767',
-  'https://picsum.photos/seed/picsum/1024/766',
-  'https://picsum.photos/seed/picsum/1024/765',
-];
-
+import { BasketProvider } from './BasketContext';
 
 function App() {
   return (
     <BasketProvider>
-      <div className="App">
+      <Router>
+        <div className="App">
           <Header />
-          <HomePage />
-      </div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/buy" element={<BuyProductPage />} />
+          </Routes>
+        </div>
+      </Router>
     </BasketProvider>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Slideshow.css';
 
+
 const Slideshow = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [progress, setProgress] = useState(0);

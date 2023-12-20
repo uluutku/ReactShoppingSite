@@ -17,14 +17,12 @@ function Header() {
       <h1>SiteLogosu</h1>
       <nav>
         <a href="/">Ana Sayfa</a>
-        <a href="/about">Alışveriş</a>
+        <a href="/buy">Alışveriş</a>
         <a href="/contact">İletişim</a>
         <div className="basket-icon" onClick={toggleBasket}>
-        Sepet 🛒 {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
-      </div>
+          Sepet 🛒 {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
+        </div>
       </nav>
-
-      
 
       {isBasketOpen && <BasketPopup setIsBasketOpen={setIsBasketOpen} />}
     </header>
