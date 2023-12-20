@@ -35,11 +35,12 @@ To run this project locally, follow these steps:
 
    git clone https://github.com/uluutku/ReactShoppingSite
 
-Install dependencies:
+2. **Install dependencies:**
 
 cd shopping-site
 npm install
-Run the development server:
+
+3. **Run the development server:**
 
 npm run dev
 Open your browser and navigate to http://localhost:xxx to view the application.
