@@ -1,0 +1,110 @@
+.product-list-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sorting-section {
+  flex: 0 0 20%; /* Set the width of the sorting section */
+  margin-right: 100px; /* Add some margin to separate it from other sections */
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+  .sort-label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .sort-select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  
+
+  /* ProductList.css */
+
+.product-list-container {
+  display: flex;
+  padding: 20px;
+  overflow-y: auto;
+  margin-left: 350px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: flex-start;
+}
+
+.product-card {
+  display: flex; /* make the card a flex container */
+  flex-direction: column; /* align the items vertically */
+  justify-content: space-between; /* distribute the space evenly between the items */
+  align-items: center; /* center the items horizontally */
+  background-color: var(--background-darker);
+  padding: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 270px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-image {
+  padding: 5px;
+  margin-bottom: 0px;
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px;
+}
+
+.product-info {
+  padding: 2px; 
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+.product-description {
+  color: #777;
+  font-size: 14px;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 18px;
+  color: var(--accent-red);
+}
+
+.add-to-cart-button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+  display: inline-block;
+}
+
+.add-to-cart-button:hover {
+  background-color: hsl(207, 100%, 40%);
+}
+

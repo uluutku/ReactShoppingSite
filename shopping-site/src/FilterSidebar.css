@@ -1,0 +1,52 @@
+.filter-sidebar {
+    background-color: var(--background-darker);
+    color: var(--text-light);
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+  
+.filter-sidebar .price-section {
+    padding: 12px;
+    border: 1px solid #333333cb;
+    border-radius: 16px;
+    margin-top: 100px;
+  }
+
+  button,
+  .apply-button {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  button:hover,
+  .apply-button:hover {
+    background-color: hsl(207, 100%, 40%);
+  }
+  
+  .price-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+
+  }
+  
+  .price-inputs input {
+    border: 2px solid var(--primary-blue); 
+    border-radius: 10px; 
+    padding: 10px; 
+    box-sizing: border-box;
+  }

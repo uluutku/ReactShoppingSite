@@ -1,0 +1,27 @@
+/* index.css */
+
+:root {
+  --background-dark: #1a1a1a;
+  --background-darker: #121212;
+  --text-light: #fff;
+  --text-dark: #333;
+  --primary-blue: #3498db;
+  --secondary-green: #2ecc71;
+  --accent-red: #e44d26;
+  --font-family: 'San Francisco', sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+
+
+
+
