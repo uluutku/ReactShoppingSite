@@ -104,7 +104,7 @@ const ProductList = ({ products }) => {
             <div key={product.id} className="product-card">
               <img src={product.thumbnail} alt={product.title} className="product-image" />
               <div className="product-info">
-                <div className="discount-badge">{product.discountPercentage}% OFF</div>
+                <div className="discount-badge">{product.discountPercentage}%</div>
                 <h3 className="product-title">{product.title}</h3>
                 <p className="product-description">{product.description}</p>
                 <p className="product-price">${product.price}</p>
