@@ -43,7 +43,9 @@
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     scroll-snap-align: start;
-    width: 300px; /* Adjust the width as needed */
+    width: 240px; 
+    height: 430px;
+    /* Adjust the width as needed */
     box-sizing: border-box;
     background-color: #fff; /* White background */
   }
