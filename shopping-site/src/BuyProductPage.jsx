@@ -11,7 +11,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://dummyjson.com/products/category/smartphones');
+        const response = await axios.get('https://dummyjson.com/products');
         console.log('API Response:', response.data);
         setProducts(response.data.products || []); // Ensure that response.data.products is an array
       } catch (error) {

@@ -97,7 +97,7 @@ const ProductList = ({ products }) => {
       <div className="product-list">
         {filteredProducts.length === 0 ? (
           <div className="no-items-message">
-            <p>No items match the selected filters. Please adjust your filters and try again.</p>
+            <p>Filtreleri düzenleyin ürün yok texti.</p>
           </div>
         ) : (
           filteredProducts.map((product) => (
