@@ -71,6 +71,28 @@ const ProductList = ({ products }) => {
 
   return (
     <div className="product-list-container">
+      <div className="filter-buttons-container">
+        <h3>Filter by Categories: </h3>
+        <button className="filter-button" onClick={() => handleSelectCategory()}>
+  All 
+  </button>
+  <button className="filter-button" onClick={() => handleSelectCategory('smartphones')}>
+    Smartphones
+  </button>
+  <button className="filter-button" onClick={() => handleSelectCategory('laptops')}>
+  Laptops
+  </button>
+  <button className="filter-button" onClick={() => handleSelectCategory('skincare')}>
+   Skincare
+  </button>
+  <button className="filter-button" onClick={() => handleSelectCategory('fragrances')}>
+  Fragrances
+  </button>
+  
+  
+  {/* Add more buttons for other categories as needed */}
+</div>
+
       <div className="sorting-section">
         <label htmlFor="sortSelect" className="sort-label">
           Sort By:
@@ -106,10 +128,14 @@ const ProductList = ({ products }) => {
               <div className="product-info">
                 <div className="discount-badge">{product.discountPercentage}%</div>
                 <h3 className="product-title">{product.title}</h3>
-                <p className="product-description">{product.description}</p>
+                <p className="product-description">
+  {product.description.split(' ').slice(0, 6).join(' ')}{product.description.split(' ').length > 5 ? '...' : ''}
+</p>
                 <p className="product-price">${product.price}</p>
+                <div className="star-ratings">{renderStarRating(product.rating)}</div>
+                <p className="rating-text">(Rating: {product.rating.toFixed(1)})</p>
                 <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>
-                  Add to Cart
+                  <img src="path-to-shopping-cart-icon.png" alt="Add to Cart" className="cart-icon" />
                 </button>
               </div>
             </div>
@@ -118,6 +144,23 @@ const ProductList = ({ products }) => {
       </div>
     </div>
   );
+};
+
+// Helper function to render star ratings
+const renderStarRating = (rating) => {
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  const starElements = [];
+
+  for (let i = 0; i < fullStars; i++) {
+    starElements.push(<span key={i} className="star">&#9733;</span>);
+  }
+
+  if (hasHalfStar) {
+    starElements.push(<span key="half" className="half-star">&#9733;</span>);
+  }
+
+  return starElements;
 };
 
 export default ProductList;

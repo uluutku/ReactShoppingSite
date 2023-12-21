@@ -35,14 +35,14 @@
 button,
 .apply-button {
   background-color: var(--primary-blue);
-  color: var(--text-light);
   border: none;
   padding: 12px;
   cursor: pointer;
+  max-height: 40px;
   width: 100%;
   text-align: center;
-  border-radius: 4px;
-  margin-top: 12px;
+  border-radius: 8px;
+  margin-top: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 

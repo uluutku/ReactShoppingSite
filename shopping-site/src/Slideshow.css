@@ -33,7 +33,7 @@
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  z-index: 1; 
+  z-index: 1; /* Ensure buttons are displayed above the images */
 }
 
 .slideshow button:hover {
@@ -65,4 +65,23 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: width 1s linear;
+}
+
+.filter-buttons-container {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.filter-button {
+  background-color: #3498db;
+  max-height: 32px;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.33s ease;
+}
+
+.filter-button:hover {
+  background-color: #133850;
 }
