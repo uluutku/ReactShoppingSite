@@ -1,46 +1,56 @@
-/* HomePage.css */
+/* Slideshow */
+.slideshow {
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
 
-.homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide-button {
+  max-height: 40px;
+  max-width: 40px;
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  color: #3498db;
+}
+
+.prev-button {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.next-button {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: #3498dbb6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  animation: progress-animation linear infinite;
+}
+
+@keyframes progress-animation {
+  from {
+    width: 0;
   }
-  
-  .slideshow-container {
-    position: relative;
+  to {
     width: 100%;
-    max-height: 300px; 
-    overflow: hidden;
   }
-  
-  .slideshow {
-    display: flex;
-    width: 500%; 
-    transition: transform 1s ease-in-out;
-  }
-  
-  .slide-image {
-    flex: 1;
-    min-width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  /* Additional styles for buttons or other elements as needed */
-  
+}

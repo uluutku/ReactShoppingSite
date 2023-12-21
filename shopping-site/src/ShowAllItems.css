@@ -1,0 +1,119 @@
+/* styles/ShowAllItems.css */
+
+.featured-items-container {
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #bdc3c7; /* Light Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #ecf0f1; /* Light Gray */
+  }
+  
+  .featured-items-container:hover {
+    box-shadow: 0 0 20px rgba(189, 195, 199, 0.5); /* Darker shadow on hover */
+  }
+  
+  .featured-items-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger font size */
+    color: #00796b; /* Teal */
+  }
+  
+  .product-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .product-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    border: 1px solid #bdc3c7; /* Light Gray border */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    scroll-snap-align: start;
+    width: 300px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05) rotate(2deg); /* Added rotation on hover */
+    box-shadow: 0 0 15px rgba(189, 195, 199, 0.7); /* Darker shadow on hover */
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .discount-badge {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .product-title {
+    font-size: 22px; /* Larger font size */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Dark Gray */
+  }
+  
+  .product-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .product-price {
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+    color: #00796b; /* Teal */
+    margin-bottom: 10px;
+  }
+  
+  .star-ratings {
+    display: flex;
+  }
+  
+  .star {
+    color: #f39c12;
+    font-size: 20px; /* Larger font size */
+    margin-right: 5px;
+  }
+  
+  .half-star {
+    color: #f39c12;
+    font-size: 20px; /* Larger font size */
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .rating-text {
+    font-size: 16px;
+    color: #777;
+  }
+  

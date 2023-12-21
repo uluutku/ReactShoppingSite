@@ -1,13 +1,30 @@
-// FilterSidebar.jsx
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './FilterSidebar.css';
 
-const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount }) => {
+const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount, onSelectCategory }) => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(2000);
-  const [minRating, setMinRating] = useState(0.0); 
+  const [minRating, setMinRating] = useState(0.0);
   const [minDiscount, setMinDiscount] = useState(0);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('https://dummyjson.com/products/categories');
+        // Modify category names
+        const modifiedCategories = response.data.map(category =>
+          category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ')
+        );
+        setCategories(modifiedCategories);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleFilterByPrice = () => {
     onSelectPriceRange({ min: minPrice, max: maxPrice });
@@ -21,6 +38,10 @@ const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount })
     onSelectDiscount(minDiscount);
   };
 
+  const handleCategoryChange = (category) => {
+    onSelectCategory(category);
+  };
+
   return (
     <div className="filter-sidebar">
       <div className="price-section">
@@ -32,7 +53,7 @@ const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount })
             id="priceRange"
             value={minPrice}
             min="0"
-            max="2000" 
+            max="2000"
             step="100"
             onChange={(e) => setMinPrice(parseInt(e.target.value))}
           />
@@ -80,6 +101,24 @@ const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount })
         <button className="apply-button" onClick={handleFilterByDiscount}>
           Apply Discount
         </button>
+      </div>
+
+      <div className="category-section">
+        <h2>Filter by Category</h2>
+        <div className="category-radio-buttons">
+          {categories.map((category) => (
+            <div key={category}>
+              <input
+                type="radio"
+                id={category}
+                name="category"
+                checked={categories.includes(category)}
+                onChange={() => handleCategoryChange(category)}
+              />
+              <label htmlFor={category}>{category}</label>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

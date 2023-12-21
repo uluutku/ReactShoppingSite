@@ -9,7 +9,6 @@
   --secondary-green: #2ecc71;
   --accent-red: #e44d26;
   --font-family: 'San Francisco', sans-serif;
-  display: flex;
   min-height: 100vh;
 }
 

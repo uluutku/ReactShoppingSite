@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 20px;
   overflow-y: auto;
-  margin-left: 350px; /* Adjust as needed */
+  margin-left: 350px;
 }
 
 .filter-buttons-container {

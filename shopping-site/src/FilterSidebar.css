@@ -21,9 +21,18 @@
   margin-bottom: 12px;
 }
 
+.category-section {
+  padding: 16px;
+  background-color: var(--background-dark);
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out;
+}
+
 .filter-sidebar .price-section,
 .filter-sidebar .rating-section,
-.filter-sidebar .discount-section {
+.filter-sidebar .discount-section  {
   padding: 16px;
   background-color: var(--background-dark);
   border-radius: 8px;
