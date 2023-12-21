@@ -1,13 +1,14 @@
 /* OrderCompletePopup.css */
 .order-complete-popup {
+  font-size: 1.2em;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:beige;
     background-color: #343434;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    box-shadow: 0 0 120px rgba(0, 0, 0, 1);
     text-align: center;
     opacity: 0;
     border-radius: 18px;
@@ -29,15 +30,20 @@
   
   .order-complete-popup button {
     background-color: #ff4d4d;
-    color: #282828;
+    color: #444444;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     border: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     border-radius: 4px;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.6s ease;
+    transition: scale 0.6s ease;
   }
   .order-complete-popup button:hover {
     background-color: #e33e3e;
+    scale: 1.05;
   }
   

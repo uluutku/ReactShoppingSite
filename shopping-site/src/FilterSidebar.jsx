@@ -13,7 +13,6 @@ const FilterSidebar = ({ onSelectPriceRange, onSelectRating, onSelectDiscount, o
     const fetchCategories = async () => {
       try {
         const response = await axios.get('https://dummyjson.com/products/categories');
-        // Modify category names
         const modifiedCategories = response.data.map(category =>
           category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ')
         );

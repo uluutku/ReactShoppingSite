@@ -8,11 +8,9 @@
 .slideshow-image {
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out; /* Add a smooth fading transition */
 }
 
 .slideshow.paused .slideshow-image {
