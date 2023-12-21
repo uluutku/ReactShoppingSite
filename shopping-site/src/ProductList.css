@@ -1,6 +1,4 @@
-
-
-  /* ProductList.css */
+/* ProductList.css */
 
 .product-list-container {
   display: flex;
@@ -41,8 +39,6 @@
 .product-card:hover {
   transform: scale(1.03);
 }
-
-
 
 .product-image {
   margin-top: 10px;
@@ -115,8 +111,8 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #ff4c4c; /* Red color, you can change it to your desired color */
-    color: #fff; /* White text color */
+    background-color: #ff4c4c; 
+    color: #fff; 
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -124,9 +120,6 @@
     z-index: 2;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  
-
-  /* ProductList.css */
 
 .product-list-container {
   display: flex;
@@ -234,16 +227,12 @@
   margin-top: 20px;
 }
 
-/* Add any additional styles based on your design preferences */
-
-/* ProductList.css */
-
 .no-items-message {
   width: 100%;
   text-align: center;
   margin-top: 20px;
   padding: 20px;
-  background-color: #3498db; /* Adjust the color to match your page */
+  background-color: #3498db; 
   color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -264,7 +253,6 @@
   margin-bottom: 10px;
 }
 
-/* Animation Keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;

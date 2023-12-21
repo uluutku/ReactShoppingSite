@@ -33,7 +33,7 @@
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  z-index: 1; /* Ensure buttons are displayed above the images */
+  z-index: 1; 
 }
 
 .slideshow button:hover {

@@ -9,13 +9,13 @@
   .slideshow-container {
     position: relative;
     width: 100%;
-    max-height: 300px; /* Adjust the height as needed */
+    max-height: 300px; 
     overflow: hidden;
   }
   
   .slideshow {
     display: flex;
-    width: 500%; /* Ensure each slide takes 20% width */
+    width: 500%; 
     transition: transform 1s ease-in-out;
   }
   
