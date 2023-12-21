@@ -89,8 +89,7 @@ const ProductList = ({ products }) => {
   Fragrances
   </button>
   
-  
-  {/* Add more buttons for other categories as needed */}
+
 </div>
 
       <div className="sorting-section">

@@ -13,13 +13,15 @@ function Header() {
   };
 
   return (
-    <header>
-      <h1>SiteLogosu</h1>
+    <header className={`header ${isBasketOpen ? 'basket-open' : ''}`}>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/OShopping_2015.png" alt="Site Logo" className="logo" />
       <nav>
         <a href="/">Ana Sayfa</a>
         <a href="/buy">Alışveriş</a>
-        <div className="basket-icon" onClick={toggleBasket}>
-          Sepet 🛒 {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
+        <div className="basket-container" onClick={toggleBasket}>
+          <span className="basket-icon">🛒</span>
+          <span className="basket-text">Sepet</span>
+          {basketItems.length > 0 && <span className="badge">{basketItems.length}</span>}
         </div>
       </nav>
 

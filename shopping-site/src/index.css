@@ -8,8 +8,7 @@
   --primary-blue: #3498db;
   --secondary-green: #2ecc71;
   --accent-red: #e44d26;
-  --font-family: 'San Francisco', sans-serif;
-  min-height: 100vh;
+  --font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -19,8 +18,3 @@ body {
   background-color: var(--background-dark);
   color: var(--text-light);
 }
-
-
-
-
-

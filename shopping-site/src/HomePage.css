@@ -11,6 +11,18 @@
   max-height: 400px;
   object-fit: cover;
   border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Add a smooth fading transition */
+}
+
+.slideshow.paused .slideshow-image {
+  animation-play-state: paused;
+  transition: none; /* Disable transition when paused */
+  opacity: 1; /* Ensure opacity is reset when paused */
+}
+
+.slideshow-image.hidden {
+  display: none;
 }
 
 .slide-button {
@@ -43,7 +55,10 @@
   bottom: 0;
   left: 0;
   width: 0;
-  animation: progress-animation linear infinite;
+}
+
+.slideshow.paused .progress-bar {
+  animation-play-state: paused;
 }
 
 @keyframes progress-animation {

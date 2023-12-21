@@ -8,12 +8,14 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
+  width: 500px;
   height: 100%;
-  background-color: #1e1e1e;
+  background-color: #2c3e50;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
-  transition: transform 0.3s ease;
+  transition: right 0.3s ease;
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif; 
 }
 
 .popup-header {
@@ -22,28 +24,28 @@ body {
   align-items: center;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: #3498db;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .popup-header h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .popup-header button {
-  background-color: transparent;
   border: none;
-  color: #ecf0f1;
-  font-size: 18px;
+  max-width: 170px;
+  margin-left: 20px;
+  color: #ecf0f1d7;
+  font-size: 1.2em;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 .popup-header button:hover {
-  color: #3498db;
+  color: #e9da5c;
 }
 
 ul {
@@ -80,19 +82,23 @@ li {
   border-radius: 8px;
 }
 
-.basket-item-name {
-  font-size: 20px;
-  color: #ecf0f1;
-  font-weight: bold;
+.basket-item-info {
+  flex-grow: 1;
 }
 
-.basket-item-price {
-  font-size: 18px;
+.basket-item-info h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.basket-item-info p {
+  font-size: 1.3em;
   color: #e74c3c;
+  margin: 5px 0;
 }
 
 button {
-  background-color: #3498db;
+  background-color: #2e7fb5;
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -104,21 +110,12 @@ button {
 
 button:hover {
   background-color: #2980b9;
-
+  transform: scale(1.05);
 }
 
 .close-button {
-  background-color: transparent;
-  color: #ecf0f1;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.close-button:hover {
-  background-color: #e74c3c;
-  color: black;
+  background-color: red;
+  font-size: 1.5em;
 }
 
 .total-section {
@@ -132,31 +129,34 @@ button:hover {
 }
 
 .total-label {
-  margin: 30px;
-  font-size: 20px;
-  color: #fff;
+  font-size: 1.2em;
 }
 
 .total-amount {
-  margin: 30px;
-  font-size: 24px;
+  font-size: 1.5em;
   color: #ff4d4d;
 }
 
 .complete-order-button {
   background-color: #4caf50;
-  font-size: 20px;
+  font-size: 1.5em;
   color: #fff;
-  padding: 20px;
+  text-align: center;
+  padding: 30px 30px;
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  scale: 0.9;
-  transition: scale 0.33s ease;
+  scale: 0.95;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .complete-order-button:hover {
   background-color: #45a049;
-  scale: 0.95;
+  transform: scale(1.02);
 }
 
+.empty-basket-message {
+  margin: 20px 0; 
+  text-align: center;
+  font-size: 1.2em; 
+  color: #cbcbcb; 
+}

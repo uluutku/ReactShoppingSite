@@ -32,7 +32,7 @@ const BasketPopup = ({ setIsBasketOpen }) => {
         </button>
       </div>
       {basketItems.length === 0 ? (
-        <p>Your basket is empty.</p>
+         <p className="empty-basket-message">Your basket is currently empty.</p>
       ) : (
         <React.Fragment>
           <ul>

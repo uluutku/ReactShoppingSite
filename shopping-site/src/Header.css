@@ -1,47 +1,101 @@
 /* Header.css */
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000; 
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #3498db;
-  }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
 
+.header.basket-open {
+  background-color: #34495e;
+}
 
-  .basket-icon {
-    font-size: large;
-    font-weight: bold;
-    margin-right: 200px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+.basket-container {
+  background-color: #1782d9;
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid #000000;
+  padding: 0px 20px;
+  border-radius: 50px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.basket-container:hover {
+  transform: scale(1.05);
+}
+
+.basket-icon {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.basket-text {
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.logo {
+  width: 200px; /* Adjust the width as needed */
+}
+.badge {
+  background-color: #e74c3c;
+  color: #ecf0f1;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 0.8em;
+  margin-left: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge {
+  animation: pulse 1s infinite;
+}
