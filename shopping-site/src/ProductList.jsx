@@ -135,7 +135,7 @@ const ProductList = ({ products }) => {
                 <div className="star-ratings">{renderStarRating(product.rating)}</div>
                 <p className="rating-text">(Rating: {product.rating.toFixed(1)})</p>
                 <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>
-                  Add to Cart 🛒
+                  Add 🛒
                 </button>
               </div>
             </div>
